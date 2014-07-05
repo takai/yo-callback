@@ -11,15 +11,19 @@
             <Set name="dataSourceClassName">org.postgresql.ds.PGSimpleDataSource</Set>
             <Call name="addDataSourceProperty">
               <Arg>serverName</Arg>
-              <Arg>localhost</Arg>
+              <Arg><SystemProperty name="jdbc.serverName" default="localhost"/></Arg>
             </Call>
             <Call name="addDataSourceProperty">
               <Arg>databaseName</Arg>
-              <Arg>yo_standup</Arg>
+              <Arg><SystemProperty name="jdbc.databaseName" default="yo_standup"/></Arg>
             </Call>
             <Call name="addDataSourceProperty">
               <Arg>user</Arg>
-              <Arg>yo</Arg>
+              <Arg><SystemProperty name="jdbc.user" default="yo"/></Arg>
+            </Call>
+            <Call name="addDataSourceProperty">
+              <Arg>password</Arg>
+              <Arg><SystemProperty name="jdbc.password" default=""/></Arg>
             </Call>
           </New>
         </Arg>
