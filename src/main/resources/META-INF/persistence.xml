@@ -4,7 +4,7 @@
 
   <persistence-unit name="persistenceUnit">
     <non-jta-data-source>jdbc/datasource</non-jta-data-source>
-    <class>net.recompile.yo.standup.Member</class>
+    <class>net.recompile.yo.callback.Subscriber</class>
   </persistence-unit>
 
 </persistence>

@@ -15,7 +15,7 @@
             </Call>
             <Call name="addDataSourceProperty">
               <Arg>databaseName</Arg>
-              <Arg><SystemProperty name="jdbc.databaseName" default="yo_standup"/></Arg>
+              <Arg><SystemProperty name="jdbc.databaseName" default="yo_callback"/></Arg>
             </Call>
             <Call name="addDataSourceProperty">
               <Arg>user</Arg>

@@ -1,4 +1,4 @@
-package net.recompile.yo.standup;
+package net.recompile.yo.callback;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,12 +11,12 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "members")
-@NamedQuery(name = "Member.countByName", query = "SELECT COUNT(m) FROM Member m WHERE m.name LIKE :name")
-public class Member implements Serializable {
+@Table(name = "subscribers")
+@NamedQuery(name = "Subscriber.countByName", query = "SELECT COUNT(s) FROM Subscriber s WHERE s.name LIKE :name")
+public class Subscriber implements Serializable {
     @Id
-    @SequenceGenerator(name = "members_id_seq", sequenceName = "members_id_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "members_id_seq")
+    @SequenceGenerator(name = "subscribers_id_seq", sequenceName = "subscribers_id_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "subscribers_id_seq")
     private Long id;
 
     @NotNull

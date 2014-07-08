@@ -1,4 +1,4 @@
-package net.recompile.yo.standup;
+package net.recompile.yo.callback;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
@@ -30,13 +30,13 @@ public class CallbackServlet extends HttpServlet {
 
                 transaction.begin();
 
-                TypedQuery<Number> query = manager.createNamedQuery("Member.countByName", Number.class)
+                TypedQuery<Number> query = manager.createNamedQuery("Subscriber.countByName", Number.class)
                                                   .setParameter("name", username);
                 if (query.getSingleResult().intValue() == 0) {
-                    Member member = new Member();
-                    member.setName(username);
+                    Subscriber subscriber = new Subscriber();
+                    subscriber.setName(username);
 
-                    manager.persist(member);
+                    manager.persist(subscriber);
                 }
 
                 transaction.commit();
